@@ -63,29 +63,34 @@
 
       for (const menu of menus) {
         const col = document.createElement("div");
-        col.classList.add("col");
+        col.setAttribute("class", "col");
 
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.setAttribute("class", "card");
 
         const img = document.createElement("img");
-        img.src = menu.img;
-        img.classList.add("card-img-top");
+        img.setAttribute("src", menu.img);
+        img.setAttribute("class", "card-img-top");
+        img.setAttribute("alt", menu.title);
 
         const cardBody = document.createElement("div");
-        cardBody.classList.add("card-body");
+        cardBody.setAttribute("class", "card-body");
 
         const title = document.createElement("h5");
-        title.classList.add("card-title");
-        title.textContent = menu.title;
+        title.setAttribute("class", "card-title");
+
+        title.innerText = menu.title;
 
         const desc = document.createElement("p");
-        desc.classList.add("card-text");
-        desc.textContent = menu.desc;
+        desc.setAttribute("class", "card-text");
+        desc.innerText = menu.desc;
 
         const price = document.createElement("div");
-        price.classList.add("d-flex", "justify-content-end");
-        price.textContent = menu.price;
+        price.setAttribute(
+          "class",
+          "d-flex justify-content-end align-items-right"
+        );
+        price.innerText = menu.price;
 
         menuList.appendChild(col).appendChild(card).appendChild(img);
         card.appendChild(cardBody);
