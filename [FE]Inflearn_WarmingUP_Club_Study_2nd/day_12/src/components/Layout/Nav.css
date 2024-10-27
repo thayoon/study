@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px; /* 메뉴 아이템 간의 간격 */
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* 호버 효과 */
+}
